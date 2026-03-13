@@ -1,0 +1,123 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+
+/* ------
+.shrikhand-regular {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fahkwang-regular {
+  font-family: "Fahkwang", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fahkwang-regular-italic {
+  font-family: "Fahkwang", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.tenor-sans-regular {
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+  
+.fahkwang-semibold {
+  font-family: "Fahkwang", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: #E7EEEF;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+  position: absolute;
+  width: 100%;
+  padding: 25px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background-color: #36747d;
+}
+
+.logo{
+    font-family: "Shrikhand", serif;
+    font-size: 1.5em;
+    color: #34BEA2;
+    pointer-events: none;
+}
+
+
+.nav_div a{
+    font-family: "Tenor Sans", sans-serif;
+    text-decoration: none;
+    color: #0F172B;
+    padding: 6px 15px;
+    border-radius: 5px;
+    margin: 0 10px;
+    font-weight: 600;
+    background-color: #34BEA2;
+}
+
+.nav_div a:hover{
+    background-color: #F3F6F6;
+    border: #36747d solid 2px;
+}
+
+.dropbtn{
+    background-color: #34BEA2;
+    color: #F3F6F6;
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #F3F6F6;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a{
+    color: #0F172B;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover{
+    background-color: #34BEA2;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown:hover .dropbtn{
+    background-color: #34BEA2;
+}
