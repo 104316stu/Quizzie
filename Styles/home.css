@@ -35,12 +35,11 @@
 }
 */
 
-
+/*------------------------------------*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body{
@@ -48,76 +47,122 @@ body{
     min-height: 100vh;
     overflow-x: hidden;
 }
-
-header{
-  position: absolute;
-  width: 100%;
-  padding: 25px 100px;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  background-color: #36747d;
+/*------------------------------------*/
+/*------Nav_bullshit------*/
+.header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #E7EEEF;
+    padding: 10px 20px;
+    background-color: #36747d;
+    border-bottom: 2px solid rgba(119, 141, 141, 0.48);
+    position: relative;
+    z-index: 4;
+    justify-content: space-between;  
+    text-align: center; 
 }
 
-.logo{
-    font-family: "Shrikhand", serif;
-    font-size: 1.5em;
-    color: #34BEA2;
-    pointer-events: none;
-}
-
-
-.nav_div a{
+.header {
     font-family: "Tenor Sans", sans-serif;
-    text-decoration: none;
-    color: #0F172B;
-    padding: 6px 15px;
-    border-radius: 5px;
-    margin: 0 10px;
-    font-weight: 600;
-    background-color: #34BEA2;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.nav_div a:hover{
-    background-color: #F3F6F6;
-    border: #36747d solid 2px;
+.nav_div{
+    display: flex;
 }
 
-.dropbtn{
-    background-color: #34BEA2;
-    color: #F3F6F6;
-    padding: 8px;
+.nav_btn{
+    display: flex;
+    align-items: center;
+    background-color: #26eac600;
     font-size: 16px;
-    cursor: pointer;
+    border-right: #95cdcd solid 4.5px;
+    padding: 14px 16px;
+    margin-left: 20px;
+
+
+    a{
+        text-decoration: none;
+        color: #F3F6F6;
+    }
+
 }
 
+.random_tx{
+    display: none;
+    overflow: hidden;
+}
+
+.btn1{
+    width: 114px;
+    justify-items: center;
+}
+ .btn2{
+
+ }
+
+
+/* dropdown */
 .dropdown{
     position: relative;
+    display: inline-block;
 }
 
-.dropdown-content{
+.info_btn{
+    display: flex;
+    align-items: center;
+    background-color: #26eac600;
+    font-size: 16px;
+    color: #F3F6F6;
+    border-right: #95cdcd solid 4.5px;
+    padding: 14px 16px;
+    cursor: pointer;
+    margin-left: 20px
+}
+
+.btn_oefen{
+    display: flex;
+    align-items: center;
+    background-color: #5fa699;
+    color: #F3F6F6;
+    font-size: 16px;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4.1px -1px rgba(15, 23, 43, 0.48);
+    
+    margin-left: 11px;
+}
+
+.drop-content{
     display: none;
     position: absolute;
-    background-color: #F3F6F6;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: rgba(149, 205, 205, 0.38);
+    backdrop-filter: blur(2.05px);
+    border-radius: 10px 10px 20px 20px;
+    overflow: hidden;
+    min-width: 160px;
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-color: #36747D;
+    z-index: 4;
+
 }
 
-.dropdown-content a{
-    color: #0F172B;
+.drop-content a{
+    color: #0f172b;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-
-.dropdown-content a:hover{
-    background-color: #34BEA2;
+.drop-content a:hover{
+    background-color: #47c5ab7e;
 }
 
-.dropdown:hover .dropdown-content{
+.dropdown:hover .drop-content{
     display: block;
 }
 
-.dropdown:hover .dropbtn{
-    background-color: #34BEA2;
-}
+/*------------------------------------*/
