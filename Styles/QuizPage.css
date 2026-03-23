@@ -1,0 +1,36 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 10px;
+}
+  
+.question {
+  width: 120%;
+  max-width: 500px;
+  padding: 15px;
+}
+
+.current {
+    background-color: gray;
+}
+
+.correct {
+  background-color: green;
+}
+
+.wrong {
+    background-color: red;
+}
+  
+
