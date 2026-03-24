@@ -17,10 +17,10 @@
                 </div>
 
                 <div class="drop-content">
-                    <a href="./ADHD.html">ADHD</a>
-                    <a href="./Autism.html">Autism</a>
-                    <a href="./Dyslexia.html">Dyslexia</a>
-                    <a href="./Touretts.html">Touretts</a>
+                    <a href="../Paginas/ADHD.html">ADHD</a>
+                    <a href="../Paginas/Autism.html">Autism</a>
+                    <a href="../Paginas/Dyslexia.html">Dyslexia</a>
+                    <a href="../Paginas/Touretts.html">Touretts</a>
                 </div>
             
             </div>
