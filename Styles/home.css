@@ -179,9 +179,8 @@ p{
 
 .cont_hero{
     position: relative;
-    height: calc(100dvh - 6em);
-    width: 100%;
-
+    height: calc(100dvh - 10em);
+    margin: 0px 50px;
 }
 
 .hero_text{
@@ -219,8 +218,7 @@ p{
     position: relative;
     height: 25%;
     background-color: #F3F6F6;
-    width: 100%;
-    margin-top: 50px;
+    margin: 50px 50px 0;
     padding: 30px;
 }
 
@@ -241,6 +239,7 @@ p{
   font-weight: 400;
   font-style: normal;
   font-style: 0.875em;
+  padding: 1em 0 ;
 }
 
 /* Section 2 */
@@ -248,8 +247,7 @@ p{
     position: relative;
     height: 50%;
     background-color: #F3F6F6;
-    width: 100%;
-    margin-top: 50px;
+    margin: 50px;
     padding: 30px;
 }
 
@@ -277,5 +275,50 @@ p{
     display: inline-block;
     padding: 20px;
     border-radius: 60px 10px 50px 0px ;
+}
+
+/* Section 3 */
+.sec3{
+    position: relative;
+    height: 50%;
+    background-color: #F3F6F6;
+    margin: 50px;
+    padding: 30px;
+}
+
+.sec3 p{
+ font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 1em 0 ;
+}
+
+
+/* Section 4 */
+.sec4{
+    position: relative;
+    height: 70%;
+    background-color: #F3F6F6;
+    margin: 50px;
+    padding: 30px;
+}
+
+.txt_block{
+    background-color: #95CDCD;
+    padding: min(5em, 8%) ;
+    border-radius: 186px 186px 10px 10px;
+}
+
+.sec4 a{
+    text-decoration: none;
+    color: #0F172B ;
+}
+
+.sec4_cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 1.2em;    
+    padding: 1em 0;
 }
 
