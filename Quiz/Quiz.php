@@ -4,8 +4,8 @@ session_start();
 // welke topic hoort bij welk bestand
 $topic_map = [
     'autism' => './Question/Autism.php',
-    'adhd'   => './Question/Adhd.php',
-    'dyslexia'   => './Question/Dyslexia.php',
+    'adhd' => './Question/Adhd.php',
+    'dyslexia' => './Question/Dyslexia.php',
     'touretts' => './Question/Touretts.php',
 ];
 
@@ -13,13 +13,16 @@ $topic_map = [
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['topic'])) {
     $topic = $_POST['topic'];
     if (array_key_exists($topic, $topic_map)) {
-        if (!isset($_SESSION['quiz_topic'])) {
-            $_SESSION['quiz_topic']    = $topic;
-            $_SESSION['quiz_current']  = 0;
-            $_SESSION['quiz_score']    = 0;
-            $_SESSION['quiz_feedback'] = null;
-            $_SESSION['quiz_checked']  = false;
-        }
+        session_destroy();
+        session_start();
+        $_SESSION['quiz_topic']    = $topic;
+        $_SESSION['quiz_current']  = 0;
+        $_SESSION['quiz_score']    = 0;
+        $_SESSION['quiz_feedback'] = null;
+        $_SESSION['quiz_checked']  = false;
+        $_SESSION['quiz_lastOpenAnswer'] = "";
+        $_SESSION['quiz_wrong'] = 0;
+        
         header('Location: ' . $_SERVER['PHP_SELF']);
         exit;
     }
@@ -41,6 +44,8 @@ $current  = $_SESSION['quiz_current'];
 $score    = $_SESSION['quiz_score'];
 $feedback = $_SESSION['quiz_feedback'];
 $checked  = $_SESSION['quiz_checked'];
+$textareaValue = $_SESSION['quiz_lastOpenAnswer'];
+$wrong = $_SESSION['quiz_wrong'];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $action = $_POST['action'];
@@ -58,8 +63,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 }
             }
 
-            if ($areascore >= 5) {
-                $areascore = count($q['keywords']) / 2;
+            if ($areascore >= 3) {
+                $areascore = count($q['keywords']);
             }
 
             $score = $areascore / count($q['keywords']);
@@ -69,6 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['quiz_feedback'] = ['text' => 'Correct!', 'type' => 'correct'];
             } else {
                 $_SESSION['quiz_feedback'] = ['text' => 'Wrong. Example answer: ' . $q['exampleAnswer'], 'type' => 'wrong'];
+                $_SESSION['quiz_lastOpenAnswer'] = $_POST['open_answer'];
             }
         } else {
             // kijk of het gekozen antwoord klopt
@@ -79,6 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['quiz_feedback'] = ['text' => 'Correct!', 'type' => 'correct'];
             } else {
                 $_SESSION['quiz_feedback'] = ['text' => 'Wrong. Correct answer: ' . $q['answers'][$q['correct']], 'type' => 'wrong'];
+                $_SESSION['quiz_wrong'] = $chosen;
             }
         }
 
@@ -107,5 +114,7 @@ $current  = $_SESSION['quiz_current'];
 $score    = $_SESSION['quiz_score'];
 $feedback = $_SESSION['quiz_feedback'];
 $checked  = $_SESSION['quiz_checked'];
+$textareaValue = $_SESSION['quiz_lastOpenAnswer'];
+$wrong = $_SESSION['quiz_wrong'];
 
 include_once("./Views/quiz_view.php");

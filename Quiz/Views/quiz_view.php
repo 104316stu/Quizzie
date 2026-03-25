@@ -37,7 +37,7 @@
                 <button
                     type="button"
                     value="<?= $i ?>"
-                    class="question<?= ($checked && $i === $q['correct']) ? ' correct' : '' ?>"
+                    class="question<?= ($checked && $i === $q['correct']) ? ' correct' : (($checked && $i === $wrong) ? ' wrong' : '') ?>"
                     <?= $checked ? 'disabled' : '' ?>
                 >
                     <?= ($i + 1) . '. ' . $answerText ?>
@@ -66,8 +66,8 @@
             <textarea
                 class="question"
                 name="open_answer"
-                <?= $checked ? 'readonly' : '' ?>
-            ></textarea>
+                <?= $checked ? 'readonly' : ''?>
+            ><?= $checked ? $textareaValue ?? "" : "" ?></textarea>
 
             <?php if ($feedback) { ?>
                 <p class="feedback <?= $feedback['type'] ?>"><?= $feedback['text'] ?></p>
