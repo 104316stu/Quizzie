@@ -1,19 +1,20 @@
-<!-- nav voor alle php files -->
+
+
 <div class="header">
         <div class="logo">
-            <img src="../../img/Logo.png" href="Index.html">
+            <a href="../Index.html"> <img src="../img/Logo.png" href="../Index.html"></a>
             
         </div>
 
         <div class="random_tx">
-            Words this is vert importat Words
+            Words, this is vert important Words
         </div>
         <div class="nav_div">
             <!-- <button class="nav_btn"> <a href="#"> Infopaginas </a></button> -->
             <div class="dropdown">
                 <div class="info_btn">
                     Infopaginas
-                    <img src="../../Icons/arrow_drop_down_23dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" class="drop_img" height="24px">
+                    <img src="../Icons/arrow_drop_down_23dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" class="drop_img" height="24px">
                 </div>
 
                 <div class="drop-content">

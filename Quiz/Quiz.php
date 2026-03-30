@@ -37,7 +37,14 @@ if (!isset($_SESSION['quiz_topic'])) {
 $topic = $_SESSION['quiz_topic'];
 include_once($topic_map[$topic]);
 
-$questions = get_questions();
+// Shuffle questions once and store in session
+if (!isset($_SESSION['quiz_questions'])) {
+    $questions = get_questions();
+    shuffle($questions);
+    $_SESSION['quiz_questions'] = $questions;
+}
+
+$questions = $_SESSION['quiz_questions'];
 $total     = count($questions);
 
 $current  = $_SESSION['quiz_current'];
@@ -63,13 +70,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 }
             }
 
-            if ($areascore >= 3) {
-                $areascore = count($q['keywords']);
-            }
+            $minimumKeywords = $q['minimumKeywords'] ?? (int) ceil(count($q['keywords']) * 0.5);
 
-            $score = $areascore / count($q['keywords']);
-
-            if ($score >= 0.5) {
+            if ($areascore >= $minimumKeywords) {
                 $_SESSION['quiz_score']++;
                 $_SESSION['quiz_feedback'] = ['text' => 'Correct!', 'type' => 'correct'];
             } else {
