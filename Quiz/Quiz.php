@@ -89,7 +89,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['quiz_feedback'] = ['text' => 'Fout!', 'type' => 'wrong'];
                 $_SESSION['quiz_wrong'] = $chosen;
             }
-            // Store the chosen answer regardless of correctness
             $_SESSION['quiz_chosen'] = $chosen;
         }
 
@@ -103,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['quiz_feedback'] = null;
         $_SESSION['quiz_checked']  = false;
         $_SESSION['quiz_lastOpenAnswer'] = '';
-        $_SESSION['quiz_chosen'] = null; // Clear chosen answer for next question
+        $_SESSION['quiz_chosen'] = null;
         header('Location: ' . $_SERVER['PHP_SELF']);
         exit;
     }
