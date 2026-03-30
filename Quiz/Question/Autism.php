@@ -86,7 +86,7 @@ function get_questions()
             'question'     => 'Op welke leeftijd verdwijnt autisme?',
             'openQuestion' => false,
             'answers'      => [
-                'Autisme verdwijnt niet — het is een levenslange conditie',
+                'Autisme verdwijnt niet - het is een levenslange conditie',
                 'Autisme verdwijnt meestal rond de leeftijd van 18 jaar',
                 'Autisme verdwijnt zodra iemand gaat werken',
             ],
