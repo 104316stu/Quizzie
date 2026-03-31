@@ -225,3 +225,60 @@ p {
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+
+/* Footer */
+
+.footer {
+  position: relative;
+  background-color: #34bea2;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer img {
+  height: 30px;
+  margin: 10px;
+}
+
+/* quiz knoppen */
+.quiz_section {
+  background-color: #f3f6f6;
+  margin: 50px;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.quiz_content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quiz_content h2 {
+  font-family: "Shrikhand", serif;
+  font-size: 2rem;
+  color: #36747d;
+  margin-bottom: 15px;
+}
+
+.quiz_content p {
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 1rem;
+  color: #0f172b;
+  margin-bottom: 30px;
+}
+
+.quiz-button {
+  color: white;
+  font-size: 1.1rem;
+  background-color: #34bea2;
+  font-weight: 600;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
