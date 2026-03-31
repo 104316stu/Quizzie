@@ -21,6 +21,10 @@ body {
 
 p {
   color: #0f172b;
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 1em 0;
 }
 
 /*------------------------------------*/
@@ -173,8 +177,7 @@ p {
   font-size: 1.5rem;
   font-style: italic;
 }
-/* ================================================================ */
-/* Contents */
+
 /* Section 1 */
 .sec1 {
   position: relative;
@@ -224,6 +227,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .A_div{
     width: 100px;
@@ -234,14 +238,56 @@ p {
     margin-bottom: 20px;
 }
 
-
-
 .sec_imgs {
   margin-top: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
+
+
+/* ADHD Info's */
+.info_div{
+    width: 100%;
+    display: flex;
+    margin-left: 30px;
+    gap: 20px;
+}
+
+.divinfo, .comb_info, .hype_info {
+    width: min(60px 100%);
+    padding: 1.5em;
+    color: black;
+    cursor: pointer;
+    transition: 150ms ease;
+    display: grid;
+    grid-template-rows: 1em 0fr;
+    justify-items: start;
+}
+
+
+
+/* ------------------------------------------- */
+.infoheader{
+ font-family: "Fahkwang", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+ text-align: center;
+ cursor: pointer;
+}
+
+.open {
+    grid-template-rows: 1em 1fr;}
+
+p {
+}
+
+
+.hide, .hide_com, .hide_hyper{
+    overflow: hidden;
+}
+
 
 /* ANIMATIES */
 .inatt{
@@ -278,7 +324,7 @@ p {
 @keyframes hyper{
   30% { transform: scale(1.2); }
   40%, 60% { transform: rotate(-20deg) scale(1.2); }
-  50% { transform: rotate(20deg) scale(1.2); }
+  50% { transform: rotate(25deg) scale(1.2); }
   70% { transform: rotate(0deg) scale(1.2); }
   100% { transform: scale(1); }
 }
@@ -311,4 +357,51 @@ p {
         border-radius: 50px;
      }
 }
+/* ------------------------------------------- */
+/* SEction  & 4 */
+.sec3, .sec4 {
+  position: relative;
+  height: 70%;
+  background-color: #f3f6f6;
+  margin: 50px;
+  padding: 30px;
+}
+
+.sec3 p, .sec4 p{
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0.5em 0;
+}
+
+
+.subhead_txt{
+  font-family: "Fahkwang", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  cursor: pointer;
+  margin: 0.6em 0;
+  font-size: 1.13em;
+  text-decoration: underline;
+}
+
+/* Footer */
+
+.footer {
+  position: relative;
+  background-color: #34bea2;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer img {
+  height: 30px;
+  margin: 10px;
+}
+
+
+
 /* ======================================================================= */
