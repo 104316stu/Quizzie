@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,400;0,600;1,400&display=swap");
@@ -222,8 +221,6 @@ p {
   text-align: start;
 }
 
-=======
->>>>>>> 6e8489d97ab4b3eefe11e73cae8cb74eb4e2aa09
 /* Soorten */
 .types_div{
     display: flex;
@@ -241,7 +238,7 @@ p {
     margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
+
 .sec_imgs {
   margin-top: 20px;
   display: flex;
@@ -293,8 +290,6 @@ p {
 }
 
 
-=======
->>>>>>> 6e8489d97ab4b3eefe11e73cae8cb74eb4e2aa09
 /* ANIMATIES */
 .inatt{
     animation: spacing 2.4s ease infinite ;
