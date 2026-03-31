@@ -37,7 +37,13 @@ if (!isset($_SESSION['quiz_topic'])) {
 $topic = $_SESSION['quiz_topic'];
 include_once($topic_map[$topic]);
 
-$questions = get_questions();
+if (!isset($_SESSION['quiz_questions'])) {
+    $questions = get_questions();
+    shuffle($questions);
+    $_SESSION['quiz_questions'] = $questions;
+}
+
+$questions = $_SESSION['quiz_questions'];
 $total     = count($questions);
 
 $current  = $_SESSION['quiz_current'];
@@ -63,19 +69,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 }
             }
 
-            if ($areascore >= 3) {
-                $areascore = count($q['keywords']);
-            }
+            $minimumKeywords = $q['minimumKeywords'] ?? (int) ceil(count($q['keywords']) * 0.5);
 
-            $score = $areascore / count($q['keywords']);
-
-            if ($score >= 0.5) {
+            if ($areascore >= $minimumKeywords) {
                 $_SESSION['quiz_score']++;
                 $_SESSION['quiz_feedback'] = ['text' => 'Correct!', 'type' => 'correct'];
             } else {
-                $_SESSION['quiz_feedback'] = ['text' => 'Wrong. Example answer: ' . $q['exampleAnswer'], 'type' => 'wrong'];
-                $_SESSION['quiz_lastOpenAnswer'] = $_POST['open_answer'];
+                $_SESSION['quiz_feedback'] = ['text' => 'Voorbeeldantwoord: ' . $q['exampleAnswer'], 'type' => 'wrong'];
             }
+            $_SESSION['quiz_lastOpenAnswer'] = $_POST['open_answer'];
         } else {
             // kijk of het gekozen antwoord klopt
             $chosen = (int)$_POST['chosen'];
@@ -84,9 +86,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['quiz_score']++;
                 $_SESSION['quiz_feedback'] = ['text' => 'Correct!', 'type' => 'correct'];
             } else {
-                $_SESSION['quiz_feedback'] = ['text' => 'Wrong. Correct answer: ' . $q['answers'][$q['correct']], 'type' => 'wrong'];
+                $_SESSION['quiz_feedback'] = ['text' => 'Fout!', 'type' => 'wrong'];
                 $_SESSION['quiz_wrong'] = $chosen;
             }
+            $_SESSION['quiz_chosen'] = $chosen;
         }
 
         $_SESSION['quiz_checked'] = true;
@@ -98,6 +101,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['quiz_current']++;
         $_SESSION['quiz_feedback'] = null;
         $_SESSION['quiz_checked']  = false;
+        $_SESSION['quiz_lastOpenAnswer'] = '';
+        $_SESSION['quiz_chosen'] = null;
         header('Location: ' . $_SERVER['PHP_SELF']);
         exit;
     }
