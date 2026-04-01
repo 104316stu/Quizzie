@@ -16,6 +16,8 @@ html {
 body {
     background: #e7eeef;
     min-height: 100dvh;
+    width: 100vw;
+    height: 100vh;
     overflow-x: hidden;
 }
 
@@ -282,3 +284,42 @@ p {
   border-radius: 10px;
   cursor: pointer;
 }
+
+
+.screensaver-layout {
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  #box {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    animation: moveX 8s linear infinite alternate,
+               moveY 6s linear infinite alternate;
+  }
+
+  #box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @keyframes moveX {
+    from { left: 0px; }
+    to   { left: calc(100vw - 200px); }
+  }
+
+  @keyframes moveY {
+    from { top: 0px; }
+    to   { top: calc(100vh - 200px); }
+  }
