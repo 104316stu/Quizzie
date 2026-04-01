@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/Main.css">
-    <title>Autism</title>
+    <link rel="stylesheet" href="../Styles/Dyslexia.css">
+    <title>Dyslexia</title>
 </head>
 <body>
-     <!--Navigatie-->
+    <!--Navigatie-->
      <div class="header">
         <div class="logo">
             <a href="../Index.html"> <img src="../img/Logo.png" href="../Index.html"></a>
@@ -38,9 +39,54 @@
             <button class="btn_oefen">Oefenen nu</button>
         </div>
     </div>
-    <form action="../Quiz/Quiz.php" method="post">
-        <input type="hidden" name="topic" value="dyslexia">
-        <input type="submit" value="Start Quiz" class="quiz-button">
-    </form>
+
+    <div class="cont_hero">
+        <div class="hero_text">
+            <h1 class="main_text">Dyslexia</h1>
+            <p class="subheader">A different way of reading</p>
+        </div>
+    </div>
+
+    <div class="sec1">
+        <div class="para_header">Wat is Dyslexia?</div>
+        <p>
+            Dyslexia is een leerstoornis die primair invloed heeft op hoe het brein woorden verwerkt. Mensen met dyslexia hebben moeite met lezen en spelling, hoewel dit niets te maken heeft met intelligentie of luiheid. Het is een neurologische aandoening waarbij het brein letters en woorden anders organiseert en verwerkt.
+        </p>
+    </div>
+
+    <div class="sec2">
+        <div class="para_header">Hoe voelt Dyslexia aan?</div>
+        <p>
+            Voor mensen met dyslexia kunnen letters en woorden anders aanvoelen. Hier kun je zien hoe hetzelfde woord eruit kan zien:
+        </p>
+        <div class="compare-box">
+            <div class="side">
+                <h3>Normaal lezen</h3>
+                <div class="word normal">READING</div>
+            </div>
+            <div class="side">
+                <h3>Door dyslexia-ogen</h3>
+                <p>Letters kunnen omgedraaid, verwisseld, of gespiegeld lijken</p>
+                <div class="word scrambled">PAEDING</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quiz_section">
+        <div class="quiz_content">
+            <h2>Test je kennis!</h2>
+            <p>Wil je je kennis over dyslexia testen? Doe mee met onze interactieve quiz en ontdek meer over deze leerstoornis.</p>
+            <form action="../Quiz/Quiz.php" method="post">
+                <input type="hidden" name="topic" value="dyslexia">
+                <input type="submit" value="Start Quiz" class="quiz-button">
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <img src="../img/Star 6.svg">
+        <p>All rights reserved to GLR Organization</p>
+        <img src="../img/Star 6.svg">
+    </div>
 </body>
 </html>

@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/Main.css">
+    <link rel="stylesheet" href="../Styles/Autism.css">
     <title>Autism</title>
 </head>
 <body>
-     <!--Navigatie-->
+    <!--Navigatie-->
      <div class="header">
         <div class="logo">
             <a href="../Index.html"> <img src="../img/Logo.png" href="../Index.html"></a>
@@ -38,9 +39,57 @@
             <button class="btn_oefen">Oefenen nu</button>
         </div>
     </div>
-    <form action="../Quiz/Quiz.php" method="post">
-        <input type="hidden" name="topic" value="autism"> <!-- Value moet de topic zijn anders werkt the pagina niet-->
-        <input type="submit" value="Start Quiz" class="quiz-button">
-    </form>
+
+    <div class="cont_hero">
+        <div class="hero_text">
+            <h1 class="main_text">Autism</h1>
+            <p class="subheader">Understanding the spectrum</p>
+        </div>
+    </div>
+
+    <div class="sec1">
+        <div class="para_header">Wat is Autism?</div>
+        <p>
+            Autism, ook wel autisme spectrum stoornis (ASS) genoemd, is een neurologische aandoening die invloed heeft op hoe mensen communiceren, sociale interacties aangaan en de wereld om zich heen waarnemen. Het is geen ziekte of iets wat genezen moet worden - het is een natuurlijk deel van neurodiversiteit.
+        </p>
+    </div>
+
+    <div class="sec2">
+        <div class="para_header">Kenmerken van Autism</div>
+        <p>
+            Autisme manifesteert zich op verschillende manieren bij verschillende mensen. Dit kan variëren van sterke en vaste interesses tot voorkeur voor routine en structuur.
+        </p>
+        <div class="sec_imgs">
+            <div class="trait_box">
+                <h3>Communicatie</h3>
+                <p>Sommige autisten hebben moeite met het begrijpen van non-verbale communicatie en sociale nuances.</p>
+            </div>
+            <div class="trait_box">
+                <h3>Routine</h3>
+                <p>Veel autisten hebben behoefte aan voorspelbaarheid en routine in hun dagelijks leven.</p>
+            </div>
+            <div class="trait_box">
+                <h3>Interesses</h3>
+                <p>Autisten kunnen zeer gepassioneerd zijn over specifieke onderwerpen en diep kennis daarvan opbouwen.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="quiz_section">
+        <div class="quiz_content">
+            <h2>Test je kennis!</h2>
+            <p>Wil je je kennis over autisme testen? Doe mee met onze interactieve quiz en ontdek hoe goed je bent ingelicht over dit onderwerp.</p>
+            <form action="../Quiz/Quiz.php" method="post">
+                <input type="hidden" name="topic" value="autism"> <!-- Value moet de topic zijn anders werkt the pagina niet-->
+                <input type="submit" value="Start Quiz" class="quiz-button">
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <img src="../img/Star 6.svg">
+        <p>All rights reserved to GLR Organization</p>
+        <img src="../img/Star 6.svg">
+    </div>
 </body>
 </html>
