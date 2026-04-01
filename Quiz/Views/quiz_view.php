@@ -98,7 +98,7 @@
     <div id="box">
       <img src="../img/brain.png" alt="Image of an brain" class="screensaver-image">
     </div>
-  </div>
+</div>
 
 </body>
 </html>
