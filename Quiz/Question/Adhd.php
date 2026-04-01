@@ -30,7 +30,7 @@ function get_questions() {
             'answers'      => [
                 'Babytijd',
                 'Rond 12 jaar',
-                'Kindertijd',
+                'Ouderdom',
                 'Allen als je volwassen bent',
             ],
             'correct'      => 2,
@@ -55,7 +55,6 @@ function get_questions() {
                 'tot alleen in de kindertijd',
                 'tot hoge leeftijd',
                 'tot in de volwassenheid',
-                'tot de maan en de zon handtje vast houden',
             ],
             'correct'      => 2,
         ],
@@ -75,10 +74,10 @@ function get_questions() {
             'question'     => 'Wat is een mogelijk oorzaak van ADHD zijn?',
             'openQuestion' => false,
             'answers'      => [
-                'Veel lezen',
-                'Te weinig slaap',
+                'Als er tijdens de zwangerschap paracetamol is ingenomen',
+                'Vershil in slaap routine',
                 'Veshil in hersenontwikkeling',
-                'Grotere hersenen',
+                'Vershil in hersenen grote',
             ],
             'correct'      => 2,
         ],
@@ -90,7 +89,7 @@ function get_questions() {
             'answers'      => [
                 'Het heeft niets met genen te maken',
                 'Het wordt door een bepaalde gen veroorzaakt',
-                'Als je iemand zoent met ADHD dan krijg je ADHD',
+                'Het gebeurt wanner er een genmutatie optreedt',
                 'Meerdere genen kunnen een rol spelen ',
             ],
             'correct'      => 3,
@@ -100,10 +99,11 @@ function get_questions() {
             'question'     => 'Wat kan het risico op ADHD verhogen',
             'openQuestion' => false,
             'answers'      => [
-                'Je been breken',
+                'Niet genoeg slapen',
                 'Veel stress thuis',
                 'Iemand met ADHD zoenen',
-                'Je rug breken',
+                'Als je innademt',
+
             ],
             'correct'      => 1,
         ],
@@ -113,10 +113,10 @@ function get_questions() {
             'openQuestion' => true,
             'minimumKeywords' => 3,
             'keywords'     => [
-                'lawaai','geluid','licht','fel','textuur','aanraking','geur',
+                'Hyperactive','snel afgeleid','Dagdromen','fel','textuur','aanraking','geur',
                 'drukte','menigte','temperatuur',
             ],
-            'exampleAnswer' => 'Hard geluid, felle lichten en onprettige kledingsstof.',
+            'exampleAnswer' => 'Bij ADHD heb ben je vaak druk en snel afgeleid',
         ],
 
 
@@ -126,9 +126,13 @@ function get_questions() {
             'minimumKeywords' => 3,
             'keywords'     => [
                 'onoplettend','inattentive','hyperactief','gecombineerd','combined','hyperactive','combinatie van beide',
-
+                'snel afgeleid', 'druk zijn'
             ],
-            'exampleAnswer' => 'Combined:  een combinatie van de twee',
+            'exampleAnswer' => '
+            Combined:  een combinatie van de twee.
+            Onplettend: stel afgeleid zijn.
+            Hyperactief: druk zijn.
+            ',
         ],
 
         [
@@ -136,9 +140,9 @@ function get_questions() {
             'openQuestion' => false,
             'answers'      => [
                 'Nooit fouten maken',
-                'Je put puls in ',
-                'Iets doen zonder na te denken',
-                'Je rug breken',
+                'Iets op een druke manier doen ',
+                'Iets doen zonder er over na te denken',
+                'Elke dag wat fouten maken',
             ],
             'correct'      => 2,
         ],
