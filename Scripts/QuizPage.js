@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('quiz-form');
     if (!form) return;
 
-    const answerButtons = form.querySelectorAll('.answer-btn');
+    const answerButtons = form.querySelectorAll('.answer');
     const chosenInput = document.getElementById('chosen-input');
 
     answerButtons.forEach(button => {

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../Styles/Main.css">
     <link rel="stylesheet" href="../Styles/QuizPage.css">
     <script src="../Scripts/QuizPage.js" defer></script>
+    <script src="../Scripts/screensaver.js" defer></script>
 </head>
 <body>
 
@@ -91,6 +92,13 @@
             <?php } ?>
         </div>
     <?php } ?>
+
 </div>
+<div class="screensaver-layout hidden">
+    <div id="box">
+      <img src="../img/brain.png" alt="Image of an brain" class="screensaver-image">
+    </div>
+</div>
+
 </body>
 </html>
