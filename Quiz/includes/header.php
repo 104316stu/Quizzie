@@ -2,7 +2,7 @@
 
 <div class="header">
         <div class="logo">
-            <a href="../Index.html"> <img src="../img/Logo.png" href="../Index.html"></a>
+            <a href="../Index.html"> <img src="../img/Logo2.png" href="../Index.html"></a>
             
         </div>
 
