@@ -1,7 +1,9 @@
 <?php
 function get_questions() {
-    return [
+    function get_questions() {
+        return [
 
-    
-    ];
+
+        ];
+    }
 }

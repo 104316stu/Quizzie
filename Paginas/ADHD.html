@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="../Scripts/ADHD.js" defer></script>
   <link rel="stylesheet" href="../Styles/ADHD.css" />
+  <link rel="stylesheet" href="../Styles/Main.css">
   <title>ADHD</title>
 </head>
 
@@ -199,6 +200,18 @@
 
   </div>
 
+
+  <!-- seection 5 -->
+  <div class="quiz_section">
+    <div class="quiz_content">
+      <h2>Test je kennis!</h2>
+      <p>Wil je je kennis over ADHD testen? Doe mee met onze interactieve quiz en ontdek hoe goed je bent ingelicht over dit onderwerp.</p>
+      <form action="../Quiz/Quiz.php" method="post">
+        <input type="hidden" name="topic" value="adhd"> <!-- Value moet de topic zijn anders werkt the pagina niet-->
+        <input type="submit" value="Start Quiz" class="quiz-button">
+      </form>
+    </div>
+  </div>
         <!--Footer-->
   <div class="footer">
     <img src="../img/Star 6.svg" />
