@@ -176,7 +176,7 @@ p{
 
 /*------------------------------------*/
 /* <!--Section 1--> */
-.sec1 {
+.sec1, .sec3{
   position: relative;
   height: 25%;
   background-color: #f3f6f6;
@@ -184,7 +184,7 @@ p{
   padding: 30px;
 }
 
-.sec1 {
+.sec1, .sec3 {
   display: flex;
   flex-direction: column;
   text-align: start;
@@ -195,7 +195,7 @@ p{
   font-size: 1.7rem;
 }
 
-.sec1 p {
+.sec1 p,  .sec3 p {
   font-family: "Tenor Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -204,7 +204,7 @@ p{
 }
 
 /* ----------Section 2------------- */
-/* .sec2 {
+ .sec2 {
   position: relative;
   height: 50%;
   background-color: #f3f6f6;
@@ -212,32 +212,53 @@ p{
   padding: 30px;
 }
 
+p{
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-style: 0.9em;
+  padding: 1em 0;
+}
+
 .sec2 {
   display: flex;
   flex-direction: column;
   text-align: start;
 }
-.Img_container{
-    display: flex;
-    flex-direction: column;
+
+.tout_imgs{
+  display: flex;
+  flex-direction: rol;
 }
 
-.img_div {
-  border-radius: 60px 10px 50px 0px;
-  background-color: #bfddd7;
+.tout_div{
+  img{
+    height: 140px;
+    width: auto;
+  }
 }
 
-.sec_imgs {
-  margin-top: 20px;
+.opo img{
+  width: 300px;
+}
+/* --------------------------------------------- */
+/* Footer */
+
+.footer {
+  position: relative;
+  background-color: #34bea2;
+  padding: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
 }
 
-.img_div img {
-  width: auto;
-  height: 100px;
-  display: inline-block;
-  padding: 20px;
-  border-radius: 60px 10px 50px 0px;
-} */
+.footer img {
+  height: 30px;
+  margin: 10px;
+}
+
+
+
+/* ======================================================================= */
